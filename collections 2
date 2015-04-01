@@ -1,0 +1,33 @@
+package cjweek4Day4;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class TestCollection4 {
+	public static void main(String args[]){  
+		   
+		  ArrayList<String> al=new ArrayList<String>();  
+		  al.add("Ravi");  
+		  al.add("Vijay");  
+		  al.add("Ajay");  
+		    
+		  ArrayList<String> al2=new ArrayList<String>();  
+		  al2.add("Sonoo");  
+		  al2.add("Hanumat");  
+		  al2.add("Ajay");  
+		  
+		  ArrayList a3 = new ArrayList();
+		  a3.add(23);
+		  a3.add("String Text");
+		  a3.add(null);
+		  a3.add(23);
+		  
+		  
+		  al.addAll(al2);    
+		  al.addAll(a3);
+		  Iterator itr=al.iterator();  
+		  while(itr.hasNext()){  
+		   System.out.println(itr.next());  
+		  }  
+		 }  
+		}  
