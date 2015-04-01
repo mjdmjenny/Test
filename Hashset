@@ -1,0 +1,28 @@
+package cjweek4day5;
+
+import java.util.HashSet;
+import java.util.PriorityQueue;
+
+public class HashsetDemo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		HashSet set1 = new HashSet();
+		set1.add(2323);
+		set1.add(2.36);
+		set1.add(null);
+		set1.add(2323);
+		set1.add("Test");
+		set1.add(null);
+
+		System.out.println("Hash Set:: "+set1.size());
+		
+		for(Object obj: set1){
+			System.out.println(obj);
+		}
+		
+	}
+
+}
