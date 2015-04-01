@@ -1,0 +1,30 @@
+package cjday10;
+
+public class Day1week3 {
+
+	
+	public static void main(String[] args) {
+		String a1 = "Automation";
+		String a2 = "Automation";
+		int i =10;
+		String n = "30";
+		Object p = null;
+		
+		System.out.println(a1==a2);
+
+		String a3 = new String("Automation");
+		System.out.println(a1 ==a3);
+		
+		
+		System.out.println(a1.equalsIgnoreCase(a3));
+		
+		Day1week3 d1 = new Day1week3();
+		System.out.println("Fully classified class name:: "+d1.toString());
+		
+		i=Integer.parseInt(n);
+		
+		System.out.println(i*i);
+		
+	}
+
+}
