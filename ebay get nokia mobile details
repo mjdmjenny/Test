@@ -1,0 +1,29 @@
+Enter fpackage cjweek5dat3;
+
+
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Ebay {
+
+	
+	public static void main(String[] args) {
+		WebDriver driver = new FirefoxDriver();
+		driver.navigate().to("http://www.ebay.com/");
+		
+	driver.findElement(By.xpath("//input[@id='gh-ac']")).clear();
+driver.findElement(By.xpath("//input[@id='gh-ac']")).sendKeys("mobile phone");
+driver.findElement(By.xpath("//input[@id='gh-btn']")).click();
+driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+driver.findElement(By.linkText("Nokia")).click();
+driver.findElement(By.partialLinkText("Nokia Lumia 520")).click();
+driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+/*driver.findElement(By.xpath("//div[@class='nonActPanel']")).getText();*/
+System.out.println(driver.findElement(By.xpath("//div[@class='section']")).getText());
+	}
+
+}
