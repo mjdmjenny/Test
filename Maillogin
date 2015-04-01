@@ -1,0 +1,45 @@
+package cjweek5dat3;
+
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Mail {
+
+	public static void main(String[] args) {
+		WebDriver driver = new FirefoxDriver();
+		driver.navigate().to("https://mail.cognizant.com");
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+	driver.findElement(By.id("username")).clear();
+	driver.findElement(By.id("username")).sendKeys("313545342313212");
+	driver.findElement(By.id("password")).clear();
+	driver.findElement(By.id("password")).sendKeys("****");
+	//System.out.println(driver.findElement(By.id("username")).getSize());
+	String i= driver.findElement(By.id("username")).getText();
+	System.out.println(i);
+	
+	String j = driver.findElement(By.id("password")).getText();
+	System.out.println(j);
+	if(length(j)==0){
+		System.out.println("The password is protected");
+	}else
+		System.out.println("The password is not protected");
+	driver.findElement(By.xpath(".//*[@id='mdMid']/table[1]/tbody/tr[7]/td/table/tbody/tr[3]/td/input[1]")).click();
+	driver.findElement(By.id("aLogOff")).click();
+	driver.close();
+	
+	
+	
+	//aLogOff
+		//|.//*[@id='username']
+		//|.//*[@id='password']
+		//|.//*[@id='mdMid']/table[1]/tbody/tr[7]/td/table/tbody/tr[3]/td/input[1]
+	}
+
+	private static int length(String j) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}
