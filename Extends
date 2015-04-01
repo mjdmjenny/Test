@@ -1,0 +1,24 @@
+package cjDay6;
+class Sample1{
+	int a = 100;
+	Sample1(){
+		System.out.println("Constructor from Super class");
+			}
+}
+public class Test extends Sample1 {
+int a=200;
+	void printsuper(){
+	 System.out.println(super.a);
+	 System.out.println(a);
+ }
+	Test(){
+		System.out.println("Constructor from Sub class Class");
+	}
+	public static void main(String[] args) {
+//		Test obj = new Test();
+		Test obj1 = new Test();
+		obj1.printsuper();
+		
+	}
+
+}
