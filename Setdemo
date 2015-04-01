@@ -1,0 +1,42 @@
+package cjweek4day5;
+
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class SetDemoItr {
+
+	public static void main(String[] args) {
+		
+		HashSet set = new HashSet();
+		
+		System.out.println("Total Set Size :: " + set.size());
+		
+		set.add(123);
+		set.add("sasdakljf");
+		set.add(4.012);
+		set.add(new A());
+		set.add(null);
+		
+		System.out.println("Total Set Size after adding objects :: " + set.size());
+		
+		System.out.println("Iterator Set Elements");
+		
+		Iterator itr = set.iterator();
+		
+		while(itr.hasNext()){
+			System.out.println(itr.next());
+		}
+		
+
+
+	}
+
+}
+
+class A{
+	
+	void Test(){
+	System.out.println("Running from Class A");
+	
+	}
+}
