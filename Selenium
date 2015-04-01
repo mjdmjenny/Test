@@ -1,0 +1,23 @@
+package cjweek5dat3;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+public class Selenium {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		FirefoxDriver ff = new FirefoxDriver();
+		ff.get("http://www.google.com");
+		ff.get("http://www.seleniumhq.org");
+		
+		ff.navigate().to("https://mail.cognizant.com");
+		
+		ff.navigate().back();
+		ff.navigate().forward();
+		ff.navigate().refresh();
+		ff.close();
+		ff.quit();
+	}
+
+}
