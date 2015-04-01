@@ -1,0 +1,29 @@
+package cjday9;
+class EmiCalc{
+	static int test =10;
+	private EmiCalc(){
+		System.out.println("Running from Constructor "+test);
+	}
+	static EmiCalc getInstance(){
+		System.out.println("Running the static block "+test);
+		EmiCalc Ecalc = new EmiCalc();
+		return Ecalc;
+	}
+	void CalculateInterest(){
+		System.out.println("Calculating the Interest Method "+test);
+	}
+}
+public class Demo04 {
+
+	public static void main(String[] args) {
+		
+		EmiCalc.test =20;
+		
+	EmiCalc calc = EmiCalc.getInstance();
+	calc.CalculateInterest();
+	calc.test = 30;
+	
+	
+	}
+
+}
