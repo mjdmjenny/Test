@@ -1,0 +1,18 @@
+package cjday8;
+
+public class Audiproduction extends Audi{
+
+	
+	public static void main(String[] args) {
+		Audiproduction audi  = new Audiproduction();
+		audi.powerstart();
+		audi.gears("Automatic mode drive");
+		audi.powersteer();
+		audi.ABS();
+		audi.poweroff();
+		
+		
+
+	}
+
+}
