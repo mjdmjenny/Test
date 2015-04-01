@@ -1,0 +1,14 @@
+package cjweek3Day4;
+
+public class Gvc extends Thread{
+
+	public void run(){
+		System.out.println("First Thread");
+}
+	public static void main(String[] args) {
+		Gvc g = new Gvc();
+		g.start();
+
+	}
+
+}
