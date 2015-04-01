@@ -1,0 +1,31 @@
+package cjDay6;
+class sample{
+
+	void test1(){
+		System.out.println("Testing in the Test method");
+		
+	}
+}
+
+public class Methodising extends sample{
+
+void test1() {
+	System.out.println("Testing test 1 from main method");
+	super.test1();
+	
+}
+	
+
+public static void main(String[] args) {
+
+	Methodising obj = new Methodising();
+	
+			obj.test1();
+			
+			sample obj2 = new sample();
+			obj2.test1();
+			
+			
+	}
+
+}
