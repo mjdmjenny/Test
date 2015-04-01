@@ -1,0 +1,29 @@
+package cjDay6;
+
+class Emp{
+	long empid;
+	String empname;
+	String dob;
+	
+	Emp(long empid, String empname, String dob ){
+	this.empid =empid;	
+	this.empname =empname;	
+	this.dob =dob;	
+	}
+void prnt(){
+	  System.out.println("The Employee Id EMP ID:  "+empid);
+	    System.out.println("The Employee Name EMP Name:  "+empname);
+	    System.out.println("The Employee DOB EMP DOB:  "+dob);
+}
+
+}
+public class EMpconstructor {
+
+	public static void main(String[] args) {
+	Emp obj =new Emp(169143,"Jennifer","07/17/1987");
+	obj.prnt();
+	}
+}
+
+
+
