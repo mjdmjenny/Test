@@ -1,0 +1,23 @@
+package cjweek3day5;
+
+public class Setprt extends Thread {
+
+	public void run(){
+		System.out.println("Thread Name :: "+Thread.currentThread().getName());
+		System.out.println("Priority ::"+Thread.currentThread().getPriority());
+	}
+	public static void main(String[] args) {
+		Setprt p1 = new Setprt();
+		Setprt p2 = new Setprt();
+		p1.setPriority(MIN_PRIORITY);
+		p2.setPriority(MAX_PRIORITY);
+		p1.setName("jen");
+		p2.setName("jen1");
+		p1.start();
+		p2.start();
+		p1.run();
+		p2.run();
+		
+	}
+
+}
