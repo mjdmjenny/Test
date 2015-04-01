@@ -1,0 +1,33 @@
+package cjweek3day2;
+
+public class Arraystring {
+public static void prntstrng(String[] arg1){
+	System.out.println("Generic function to print array elements");
+	for (String a : arg1){
+		System.out.println(a);
+	}
+	
+}
+	
+	public static void main(String[] args) {
+		String[] ArrayString1 = new String[5];
+		
+		ArrayString1[0] = "Java";
+		ArrayString1[1] = "core java";
+		ArrayString1[2] = "j2ee";
+		ArrayString1[3] = "J2me";
+		ArrayString1[4] = "Selenium webdriver";
+		
+		for (String a: ArrayString1){
+			System.out.println(a);
+		}
+		
+		for (int i =0; i<ArrayString1.length; i++){
+			ArrayString1[i].toUpperCase();
+						System.out.println(ArrayString1[i].toUpperCase()+" contains "+ArrayString1[i].length() + "number of charcters");
+		}
+		prntstrng(ArrayString1);
+		
+	}
+
+}
