@@ -1,0 +1,39 @@
+package cjday4;
+class Day4{
+
+double c;
+int i;
+int d;
+double e;
+Day4(int d, double e){
+	this.d =d;
+			this.e=e;
+}
+Day4(double a){
+	c=a;
+}
+		Day4(int i){
+			
+		System.out.println("initialise a variable");
+		this.i =i;
+	}
+		 void prnt(){
+				System.out.println("Value of i :: "+i);
+				System.out.println("Value of c :: "+c);
+				System.out.println("Value of e :: "+e);
+				System.out.println("Value of d :: "+d);
+			}
+}
+public class Parameterise {
+
+	
+	public static void main(String[] args) {
+		Day4 obj = new Day4(9);
+		obj.prnt();
+Day4 obj1 = new Day4(9.1);
+obj1.prnt();
+Day4 obj2 = new Day4(2,2.1);
+obj2.prnt();
+	}
+
+}
