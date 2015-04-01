@@ -1,0 +1,25 @@
+package cjDay7;
+abstract class run1{
+	static void test3(){
+		System.out.println("Test from static test3");
+	}
+	void test2(){
+		System.out.println("Test from test2");
+	}
+}
+public class Inheritdoubt extends run1{
+void test2(){
+	super.test2();
+	super.test3();
+	
+	System.out.println("Test from Sample test2");
+}
+	
+	public static void main(String[] args) {
+		Inheritdoubt obj = new Inheritdoubt();
+		System.out.println("Test1");
+obj.test2();
+
+	}
+
+}
