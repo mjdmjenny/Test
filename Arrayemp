@@ -1,0 +1,27 @@
+package cjweek3day2;
+
+public class ArrayEmp {
+
+	
+	public static void main(String[] args) {
+		// Declaration of arrays
+		
+		Employee[] Arrayemployee = new Employee[5];
+		Arrayemployee [0] = new Employee("A1",111,"QA");
+		Arrayemployee [1] = new Employee("A2",112,"SQA");
+		Arrayemployee [2] = new Employee("A3",113,"Teamlead");
+		Arrayemployee [3] = new Employee("A4",114,"Manager");
+		Arrayemployee [4] = new Employee("A5",115,"Director");
+		
+		
+		System.out.println("EmpName\tEmpId \t EmpRole");
+		for (Employee e :Arrayemployee){
+			System.out.println(e.EmpName + "   \t "+ e.EmpID +"\t"+ e.EmpRole );
+		}
+		for (int i = 0; i<Arrayemployee.length; i++){
+			System.out.println(Arrayemployee[i].EmpName + "   \t "+ Arrayemployee[i].EmpID +"\t"+ Arrayemployee[i].EmpRole );
+		}
+	}
+	
+
+}
