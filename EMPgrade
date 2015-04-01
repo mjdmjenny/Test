@@ -1,0 +1,38 @@
+package cjday2;
+
+class Test4{
+	static String empName;
+	static int empId;
+	static void empRole(){
+		System.out.println("Automation Engineer");
+	}
+	char empGrade;
+	void empDesg(){
+		System.out.println("Training");
+	
+	}
+	
+}
+public class Test3 {
+
+	public static void main(String[] args) {
+		Test4.empName="XYZ";
+		Test4.empId=457898;
+		System.out.println("Employee Name :: " +Test4.empName);
+		System.out.println("Employee Id :: "+ Test4.empId);
+		Test4.empRole();
+		System.out.println("**********************************");
+		Test4.empName="ABC";
+		Test4.empId=123456;
+		System.out.println("Employee Name :: " +Test4.empName);
+		System.out.println("Employee Id :: "+ Test4.empId);
+		Test4.empRole();
+		Test4 obj = new Test4();
+		
+		obj.empGrade='A';
+		obj.empDesg();
+		System.out.println("Employee Grade ::  "+obj.empGrade);
+		
+	}
+
+}
