@@ -1,0 +1,45 @@
+package cjweek5dat3;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Demogoogle {
+static List<WebElement> autosug= null;
+public static void main(String[] args) throws InterruptedException {
+WebDriver driver = new FirefoxDriver();
+driver.get("https://google.com");
+   driver.findElement(By.xpath("//input[@id='lst-ib']")).sendKeys("selenium");
+/*JavascriptExecutor jse = (JavascriptExecutor) driver;
+jse.executeScript("document.getElementById(\"lst-ib\").value=\"selenium\"");
+*/
+    
+   WebDriverWait wd = new WebDriverWait(driver, 6);
+   wd.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'Feelin')]/ancestor::div//div[contains(text(),'selenium')]")));
+   
+   List<WebElement> autosug = driver.findElements(By.xpath("//a[contains(text(),'Feelin')]/ancestor::div//div[contains(text(),'selenium')]"));
+for(int i =0; i< autosug.size(); i++){
+             System.out.println("Text \t" + autosug.get(i).getText());
+             
+                 }
+driver.manage().window().maximize();
+ 
+while(true){
+try{
+             driver.findElement(By.xpath("//div[contains(@class,'sbqs_c')]//b[contains(text(),'webdriver')]")).click();
+             break;
+}catch(Exception e){
+             e.printStackTrace();
+}
+ 
+}
+}
+
+}
+
