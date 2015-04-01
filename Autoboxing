@@ -1,0 +1,31 @@
+package cjweek4day5;
+
+public class Autoboxing {
+
+	
+	public static void main(String[] args) {
+		
+		//boxing
+		Integer intobj = new Integer(23);
+		System.out.println(intobj+20);
+		Double doubleobj =new Double(2.3);
+		
+		//unboxing explicit
+		int K = intobj.intValue();
+		System.out.println(K+20);
+		//unboxing implicit
+		int c = intobj;
+		System.out.println(c+20);
+Object obj = 25;
+		
+		System.out.println(obj);
+		
+		//TypeCasting to Primitive datatype
+		
+		int b = (int) obj;
+		
+		System.out.println(b);	
+		
+	}
+
+}
