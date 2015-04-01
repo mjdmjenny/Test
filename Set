@@ -1,0 +1,43 @@
+package cjweek5dat3;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class TestSElectDB {
+static ArrayList list1=  null;
+public static void main(String[] args) {
+WebDriver driver = new FirefoxDriver();
+driver.get("C:\\Users\\169143\\Desktop\\sample1.html");
+WebElement dd=driver.findElement(By.tagName("select"));
+Select select = new Select (dd);
+List<WebElement> allOptions = select.getOptions();
+int c = allOptions.size();
+System.out.println("No of option is listbox" + c);
+list1 = new ArrayList();
+for(int i=0; i<c;i++){
+WebElement option = allOptions.get(i);
+String Text = option.getText().toUpperCase();
+list1.add(Text);
+}
+System.out.println(list1);
+Collections.sort(list1);
+System.out.println(list1);
+for(int j =0; j<list1.size() ;j++){
+if(!(j==list1.size()-1)){
+String Text1 = list1.get(j).toString();
+String Text2 = list1.get(j+1).toString();
+if(Text1.equalsIgnoreCase(Text2)){
+System.out.println("Duplicate value in Dropdown is dispalyed at index " + j + "\t"+ Text1);
+}
+}
+}
+}
+}
+
