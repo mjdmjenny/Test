@@ -1,0 +1,55 @@
+package cjday9;
+class A{
+	void testprnt1(){
+		System.out.println("Test Print 1 from A");
+	}
+}
+
+class B extends A{
+	void testprnt2(){
+		System.out.println("Test Print 2 from B");
+	}
+}
+public class Staticmethod extends B{
+	void testprnt3(){
+		System.out.println("Test Print 3 from Staticmethod");
+	}
+	public static void main(String[] args) {
+System.out.println("Creating instance of child class Static Method ");
+	
+Staticmethod staticmethod = new Staticmethod();
+staticmethod.testprnt1();
+staticmethod.testprnt2();
+staticmethod.testprnt3();
+
+System.out.println("Creating instance of class B ");
+
+B b = new B();
+b.testprnt1();
+b.testprnt2();
+
+System.out.println("Creating instance of class A super class");
+A a = new A();
+a.testprnt1();
+
+
+System.out.println("Upcasting implicit class A super class ");
+A as = new Staticmethod();
+as.testprnt1();
+
+
+System.out.println("Upcasting implicit class B super class");
+B bs = new Staticmethod();
+bs.testprnt1();
+bs.testprnt2();
+
+//Downcasting Explicit
+try{
+	Staticmethod Sm =(Staticmethod) new A();
+} catch(ClassCastException e){
+	System.out.println("Handling Class Cast Exception");
+
+}
+
+	}
+}
