@@ -1,0 +1,22 @@
+package cjday4;
+
+public class Test1 {
+
+
+	
+	public static void main(String[] args) {
+		
+		int i = 10;
+		int res1 = 10*(i++);
+		int res2 =10*(++i);
+		int res3 = 10*(i--);
+		int res4 = 10*(--i);
+		System.out.println(i);
+		System.out.println(res1);
+		System.out.println(res2);
+		System.out.println(res3);
+		System.out.println(res4);
+		
+	}
+
+}
