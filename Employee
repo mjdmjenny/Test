@@ -1,0 +1,46 @@
+package cjday9;
+class Employee{
+	 private int EmpID;
+	 private String EmpName;
+	 private Double EmpSalary;
+	 
+	 Employee(){
+		 
+	 }
+	Employee(int EmpID, String EmpName, Double EmpSalary){
+		this.EmpID = EmpID;
+		this.EmpName = EmpName;
+		this.EmpSalary = EmpSalary;
+			}
+	public int getEmpID(){
+		return this.EmpID;
+	}
+	public String getEmpName(){
+		return this.EmpName;
+	}
+	public Double getEmpSalary(){
+		return this.EmpSalary;
+	}
+	public void setEmpSalary(double newSalary){
+		this.EmpSalary=newSalary;
+	}
+}
+
+public class Demo02 {
+
+	public static void main(String[] args) {
+		Employee emp = new Employee(123456, "John",5000d);
+		System.out.println("EmpId:  "+emp.getEmpID());
+		System.out.println("EmpName:  "+emp.getEmpName());
+		System.out.println("EmpSalary:  "+emp.getEmpSalary());
+		emp.setEmpSalary(10000);
+		System.out.println("Salary after Increment "+emp.getEmpSalary());
+		
+		Employee emp1 = new Employee();
+		System.out.println("EmpId:  "+emp1.getEmpID());
+		System.out.println("EmpName:  "+emp1.getEmpName());
+		System.out.println("EmpSalary:  "+emp1.getEmpSalary());
+		
+	}
+
+}
