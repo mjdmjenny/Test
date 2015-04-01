@@ -1,0 +1,14 @@
+package cjweek5dat3;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+public class upcasting {
+
+	
+	public static void main(String[] args) {
+		WebDriver driver = null;
+		driver = new FirefoxDriver();
+		//driver = new SafariDriver();
+
+	}
+
+}
