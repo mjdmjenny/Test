@@ -1,0 +1,15 @@
+package cjday2;
+
+public class Leapyear {
+
+		public static void main(String[] args) {
+	int year = 1100;
+	System.out.println("To find whether the year " +year +" is a Leap Year");
+if (year % 4 == 0){
+System.out.println("Year " +year +" is a Leap Year.");
+}
+else 
+	System.out.println("Year " +year + " is not a Leap Year.");
+	}
+
+}
