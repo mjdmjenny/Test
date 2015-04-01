@@ -1,0 +1,26 @@
+package cjweek3Day4;
+
+public class Sleepfnc extends Thread{
+
+	public void run(){
+		for (int i = 0; i<5;i++)
+		System.out.println("Wait Time");
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
+		}
+		
+	}
+	public static void main(String[] args) {
+		Sleepfnc sleep1 = new Sleepfnc();
+		Sleepfnc sleep2 = new Sleepfnc();
+		sleep1.start();
+		sleep2.start();
+		
+		
+
+	}
+
+}
