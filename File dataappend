@@ -1,0 +1,44 @@
+package cjweek4day3;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class Filedataappend {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) throws IOException{
+		
+		File append = new File("C:\\Users\\169143\\Desktop\\Week4Day17\\Hello1\\Wednesday.txt");
+		FileWriter FWR = new FileWriter(append);
+		FWR.write("Today is Wednesday.");
+		FWR.flush();
+		FWR.close();
+		
+		FileReader rd = new FileReader(append);
+		
+		System.out.println("No of Char in the file "+append.length());
+		
+		int n = (int) append.length();
+		char[] dataArray = new char[n];
+		rd.read(dataArray);
+		String StringArraydata = new String (dataArray);
+		System.out.println("Test from Sample txt:: "+ StringArraydata);
+		
+		PrintWriter pr = new PrintWriter(new BufferedWriter(new FileWriter("C:\\Users\\169143\\Desktop\\Week4Day17\\Hello1\\Wednesday.txt", true)));
+		pr.write("\n Trying to Concotanate string");
+		pr.flush();
+		pr.close();
+		
+		
+		
+		
+		
+	}
+
+}
