@@ -1,0 +1,35 @@
+package cjday3;
+class SI{
+	static void stmt1(){
+	System.out.println("To find the Simple Interest by using two classes::");
+	}
+	
+	static long P;
+	static int T;
+	double R;
+	void stmt2(){
+	System.out.println("By using Static and non static methods and fields::");
+	}
+	double interest(){
+		double interest = (P*R*T)/100;
+		return interest;
+		}
+}
+public class SIstatic {
+
+	public static void main(String[] args) {
+	
+	SI.P = 100000000000000L;
+	SI.T = 30;
+	SI.stmt1();
+	SI obj = new SI();
+	obj.R = 14.5;
+	obj.stmt2();
+	obj.interest();
+	System.out.println("The Principle Amount is :: "+SI.P);
+	System.out.println("The Rate is :: "+obj.R);
+	System.out.println("The Tenure is :: "+SI.T);
+	System.out.println("The Interest calculated for the given values is :: "+obj.interest());
+	}
+
+}
