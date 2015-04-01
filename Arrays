@@ -1,0 +1,37 @@
+package cjday9;
+
+public class Arrays {
+
+	
+	public static void main(String[] args) {
+		
+		//System.out.println("Declare Systax 1");
+		int[] Cognizant = new int[5];
+		
+		System.out.println("Declare Systax 2");
+		double ArraysD[] = new double [3];
+		
+int arraylen=Cognizant.length;
+int arraysdlen=ArraysD.length;
+
+
+System.out.println(arraylen);
+System.out.println(arraysdlen);
+
+Cognizant[0] =12;
+Cognizant[1] =11;
+Cognizant[2] =10;
+Cognizant[3] =13;
+Cognizant[4] =14;
+
+
+for (int i :Cognizant){
+	System.out.println(i);
+}
+for (int j=0; j<Cognizant.length; j++){
+	System.out.println(Cognizant[j]);
+}
+	}
+	
+
+}
