@@ -1,0 +1,24 @@
+package cjday9;
+
+public class Demo05 {
+
+		public static void main(String[] args) {
+String a ="Automation3";
+String b = "Automation3";
+
+String s = new String();
+StringBuffer sb = new StringBuffer("Automation1");
+sb.reverse();
+
+StringBuilder sb1 = new StringBuilder("Automation2");
+sb.reverse();
+System.out.println(a);
+System.out.println(b);
+System.out.println(s);		
+System.out.println(sb);		
+System.out.println(sb1);		
+
+
+	}
+
+}
