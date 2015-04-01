@@ -1,0 +1,16 @@
+package cjweek4day2;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Iodemowrite {
+
+	
+	public static void main(String[] args) throws IOException {
+		FileWriter wr = new FileWriter("C:\\Users\\169143\\Desktop\\Week4day16\\Hello1\\sample.txt");
+		wr.write("Hello guys");
+wr.flush();
+wr.close();
+	}
+
+}
