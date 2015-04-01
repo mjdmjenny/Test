@@ -1,0 +1,14 @@
+package cjweek4day2;
+
+public class test {
+
+	static void prtn(){
+		System.out.println("Hello");
+	}
+	public static void main(String[] args) {
+	test obj = new test();
+	obj.prtn();
+	
+	}
+
+}
