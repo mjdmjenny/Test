@@ -1,0 +1,18 @@
+package cjweek4day2;
+
+import java.io.File;
+import java.io.IOException;
+
+public class Iodemo1 {
+
+	public static void main(String[] args) throws IOException {
+		File file = new File("Hello1");
+		file.mkdir();
+		
+	System.out.println("Does the file exists:: "+file.exists());	
+	System.out.println("Cannonical path:: "+file.getCanonicalFile());
+	System.out.println("Absolute path of the file:: "+file.getAbsolutePath());
+
+	}
+
+}
