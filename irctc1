@@ -1,0 +1,33 @@
+package cjweek5dat3;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Google {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		WebDriver ff = new FirefoxDriver();
+		ff.get("http://irctc.com/displayServlet");
+		List<WebElement> listlinks = ff.findElements(By.xpath("//a"));
+		System.out.println("No of Links available are:: "+listlinks.size());
+
+		for (int i = 0; i<listlinks.size();i++){
+			System.out.println(listlinks.get(i).getText());
+		}
+		
+		WebElement CCnumber = ff.findElement(By.xpath("//label[contains(text(),'Central Control')]/ancestor::p/labe;[2]"));
+		
+		System.out.println("the messgae:: "+CCnumber.getText().trim());
+		
+	}
+	
+	
+
+}
