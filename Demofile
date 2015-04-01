@@ -1,0 +1,32 @@
+package cjweek4day2;
+
+import java.io.FileWriter;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class IOdemofilewriter {
+
+
+	public static void main(String[] args) throws IOException {
+		FileWriter wr =null;
+		
+try{
+	wr = new FileWriter("");
+	wr.write("Helooo Guys");
+	wr.flush();
+	}catch (IOException e){
+		e.printStackTrace();
+	}catch(FileNotFoundException f){
+		f.printStackTrace();
+	}catch(Exception e){
+		e.printStackTrace();
+	}finally{
+		try{
+			wr.close();
+				}catch(IOException e){
+					e.printStackTrace();
+				}
+	}
+	}
+
+}
