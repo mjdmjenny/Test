@@ -1,0 +1,14 @@
+package cjweek4day3;
+enum day{
+	Sunday, Monday, Tuesday, Wednesday;
+}
+public class Ennumdemo {
+
+	public static void main(String[] args) {
+		day dayName;
+		System.out.println("Today is "+day.Wednesday);
+		
+
+	}
+
+}
