@@ -1,0 +1,32 @@
+package cjday2;
+
+public class Test2 {
+
+	public static void sample1 (){
+		System.out.println("*******************");
+		System.out.println("Day 2 training on methods");
+		System.out.println("**********************************");	
+//	return;
+	}
+	public static int sample2 (){
+		int i = 280008;
+		System.out.println("*******************");
+		System.out.println("Integer return Type");
+		System.out.println("**********************************");	
+	return i;
+	}
+	public static double SI (long p, int t, double r){
+		double SI = (p*r*t)/100;
+		return SI;
+	}
+	public static void main(String[] args) {
+		
+		sample1();
+		int j = sample2();
+		System.out.println("Result of 2nd method ::"+ j);
+		double Result = SI(12000,5,10.10);
+		double EMI = Result/12;
+		System.out.println("Simple Interest calculation::"+Result+ "  EMI per Month :: "+EMI);
+	}
+
+}
