@@ -1,0 +1,84 @@
+package cjday8;
+
+public interface Cars {
+
+	void wheels();
+	void engine();
+	void brakes();
+	void accelerators();
+	void light();
+	
+}
+
+interface Automatic extends Cars{
+	
+	
+	void powersteer();
+	void powerstart();
+	void poweroff();
+	void gears(String G);
+	void ABS();
+	}
+
+class Audi implements Automatic{
+	@Override
+	public void wheels() {
+		System.out.println("MRF Tyres");
+	}
+
+	@Override
+	public void engine() {
+		System.out.println("2.4 ltrs Engine");
+		
+	}
+
+	@Override
+	public void brakes() {
+		System.out.println("Please apply brakes when u see road hump");
+		
+	}
+
+	@Override
+	public void accelerators() {
+		System.out.println("Zooooooooooooooom");
+		
+	}
+
+	@Override
+	public void light() {
+		System.out.println("Use during night times");
+		
+	}
+
+	@Override
+	public void powersteer() {
+		System.out.println("Direction");
+		
+	}
+
+	@Override
+	public void powerstart() {
+		System.out.println("Ignition On");
+		
+	}
+
+	@Override
+	public void poweroff() {
+		System.out.println("Ignition Off");
+		
+	}
+
+	@Override
+	public void gears(String G) {
+		System.out.println("Driving mode"+G);
+		
+	}
+
+	@Override
+	public void ABS() {
+		System.out.println("Better breaking feature");
+		
+	}
+	
+	
+}
