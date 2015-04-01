@@ -1,0 +1,28 @@
+package cjweek4Day4;
+
+import java.util.ArrayList;
+
+class A{
+	void Test1(){
+	System.out.println("Running from Class A");
+}
+}
+public class ListDemo1{
+	
+
+	public static void main(String[] args) {
+ArrayList list = new ArrayList();
+list.add(23);
+list.add(new A());
+list.add("String Text");
+list.add(null);
+list.add(23);
+
+System.out.println(list);
+
+list.set(3, 24);
+System.out.println(list);
+
+	}
+
+}
