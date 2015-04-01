@@ -1,0 +1,47 @@
+package cjweek5dat3;
+
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.HashSet;
+import java.util.List;
+
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Testng {
+		
+	public static void main(String[] args) {
+		HashSet set = new HashSet();
+		WebDriver ff = new FirefoxDriver();
+		ff.navigate().to("http://testng.org/doc/documentation-main.html");
+List<WebElement> a = ff.findElements(By.tagName("a"));
+System.out.println("No of links available:: "+a.size());
+for (int i=0; i<a.size(); i++){
+	int stscode = 0;
+	try{
+		stscode=getResponseCode(a.get(i).getAttribute("href"));
+	      }catch(Exception e)
+	      {
+	      e.printStackTrace();
+	      }
+	      if(!(stscode==404)) {
+	      System.out.println("Valid links ::  "+a.get(i).getAttribute("href"));
+	      }
+	        }
+ff.close();    
+}
+
+public static int getResponseCode(String urlString) throws IOException{
+    URL u = new URL(urlString);
+    HttpURLConnection h =  (HttpURLConnection)  u.openConnection();
+    h.setRequestMethod("GET");
+    h.connect();
+    return h.getResponseCode();
+   }
+}
