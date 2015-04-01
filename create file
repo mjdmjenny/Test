@@ -1,0 +1,20 @@
+package cjweek4day2;
+
+import java.io.File;
+import java.io.IOException;
+public class Iodemocreatefile {
+
+	
+	public static void main(String[] args) throws IOException {
+		File file = new File("C:\\Users\\169143\\Desktop\\Week4day16\\Hello1\\sample.txt");
+
+		file.createNewFile();
+		
+		
+	System.out.println("Does the file exists:: "+file.exists());	
+	System.out.println("Cannonical path:: "+file.getCanonicalFile());
+	System.out.println("Absolute path of the file:: "+file.getAbsolutePath());
+
+	}
+
+}
