@@ -1,0 +1,45 @@
+package cjweek5dat3;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Tvmi {
+public static void main(String[] args) {
+	String j = "Brasil";
+	
+		WebDriver ff = new FirefoxDriver();
+		ff.navigate().to("http://mi.tv");
+		ff.manage().window().maximize();
+		ff.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		ff.findElement(By.linkText(j)).click();
+		ff.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		ff.findElement(By.id("login")).click();
+		ff.findElement(By.className("register-link")).click();
+		ff.findElement(By.className("link-login")).click();
+		ff.findElement(By.name("email")).clear();
+		ff.findElement(By.name("email")).sendKeys("abc@gmail.com");
+		ff.findElement(By.name("password")).clear();
+		ff.findElement(By.name("password")).sendKeys("********");
+		ff.findElement(By.xpath("//*[@id='app-main-region']//button")).click();
+		ff.findElement(By.xpath("//*[@id='app-main-region']//button")).click();
+		ff.findElement(By.xpath("//*[@id='app-profile-show-tabs-region']/div/ul/li[2]/a")).click();
+		
+		/*List<WebElement> a = ff.findElements(By.xpath("//div[@class='title']//span"));
+		for (WebElement temp:a){
+			System.out.println("Channel Title ::  "+temp.getText());
+  			}
+		System.out.println("No of channels available:: "+a.size());*/
+		List<WebElement> totalChannels = ff.findElements(By.cssSelector(".like"));
+		
+		for(WebElement temp:totalChannels){
+			System.out.println(temp.getText());	
+			
+		}
+		ff.close();
+}
+}
