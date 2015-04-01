@@ -1,0 +1,52 @@
+package cjweek5dat3;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Week6Day1 {
+
+	public static void main(String[] args) {
+		ArrayList list1 = null;
+		WebDriver driver = new FirefoxDriver();
+		driver.get("C:\\Users\\169143\\Desktop\\sample1.html");
+		WebElement dd = driver.findElement(By.tagName("select"));
+		
+		Select select = new Select(dd);
+		List<WebElement> allOptions = select.getOptions();
+		int c = allOptions.size();
+		System.out.println("No of options in the List box :: "+c);
+		list1 = new ArrayList();
+		for (int i = 0; i<c; i++){
+			WebElement option = allOptions.get(i);
+			String Text = option.getText().toUpperCase();
+			//System.out.println(Text);
+			list1.add(Text);
+			
+			
+		}
+		
+		System.out.println(list1);
+		Collections.sort(list1);
+		System.out.println(list1);
+		
+		for(int j=0; j<list1.size();j++){
+			if(!(j==list1.size()-1)){
+			String Text1 = list1.get(j).toString();
+			String Text2 = list1.get(j+1).toString();
+			if(Text1.equals(Text2)){
+				System.out.println("Duplicates are found in Dropdown Index "+j+"  "+Text1 );	
+			}
+			//System.out.println((Text1+" "+Text2));
+		}
+		}
+		
+	}
+
+}
