@@ -1,0 +1,22 @@
+package cjday4;
+class Day3{
+	int i;
+		Day3(){
+			i =10;
+		System.out.println("TGIF 30");
+	}
+		 void prnt(){
+			System.out.println("Value of i :: "+i);
+		}
+}
+public class Test2 {
+
+	
+	public static void main(String[] args) {
+		Day3 obj = new Day3();
+		obj.prnt();
+		
+		
+	}
+
+}
