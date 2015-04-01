@@ -1,0 +1,42 @@
+package cjday2;
+
+public class Test1 {
+
+	public static void main(String[] args) {
+		int v; //declare
+		int i = 1000000000;
+		float f = 10.3f;
+		double d =3.143333333333;
+		boolean status = false;
+		char letter = 'A';
+		String name = "Cognizant ";
+		System.out.println(letter);
+		System.out.println(name);
+//		data types print statement 
+		
+	try {
+			System.out.println((20+20)/0);
+		}
+		catch (ArithmeticException e) {
+			System.out.println("Trying to divide by zero");
+			
+		}	
+		
+		System.out.println("Hello World");
+System.out.println("Integer value : : " +i);
+System.out.println("Float value : :" +f);
+System.out.println("Double value :: " + d);
+System.out.println(status);
+System.out.println(20+20);
+System.out.println("sum : : " +(20+20));
+System.out.println(20+20+ ":: Sum");
+if(status){
+	
+	v = 20;  //initialising the variable
+	System.out.println("local variable "+v);
+}
+else { v =30;
+System.out.println("local variable "+v);}
+	}
+
+}
