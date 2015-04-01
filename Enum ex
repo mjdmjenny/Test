@@ -1,0 +1,53 @@
+package cjweek4day3;
+
+public class Ennumexample 
+ {
+
+    public enum Company {
+           EBAY, PAYPAL, GOOGLE, YAHOO, ATT
+    }
+
+    Company cName;
+
+    public Ennumexample(Company cName) {
+           this.cName = cName;
+    }
+
+    public void companyDetails() {
+           switch (cName) {
+           case EBAY:
+                  System.out.println(cName+"\t::Biggest ecommerce site online.");
+                  break;
+
+           case PAYPAL:
+                  System.out.println(cName+"\t::Simplest way to manage Money Online.");
+                  break;
+
+           case GOOGLE:
+        	   System.out.println(cName+"\t::Biggest Search Engine.");
+               break;
+        	   
+        	   
+           case YAHOO:
+                  System.out.println(cName+"\t::1st Web 2.0 Company.");
+                  break;
+
+           default:
+                  System.out.println(cName+"\t::Cognizant - MNC => SAS");
+                  break;
+           }
+    }
+
+    public static void main(String[] args) {
+    	Ennumexample ebay = new Ennumexample(Company.EBAY);
+           ebay.companyDetails();
+           Ennumexample paypal = new Ennumexample(Company.PAYPAL);
+           paypal.companyDetails();
+           Ennumexample google = new Ennumexample(Company.GOOGLE);
+           google.companyDetails();
+           Ennumexample yahoo = new Ennumexample(Company.YAHOO);
+           yahoo.companyDetails();
+           Ennumexample att = new Ennumexample(Company.ATT);
+           att.companyDetails();
+    }
+}
