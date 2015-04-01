@@ -1,0 +1,20 @@
+package cjday3;
+
+import java.util.Scanner;
+
+public class Leapyearinput {
+
+	public static void main(String[] args) {
+		Scanner Year = new Scanner(System.in);
+		System.out.println("Enter the Year:: ");
+		int year = Year.nextInt();
+		System.out.println("To find whether the year " +year +" is a Leap Year");
+	if (year % 4 == 0){
+	System.out.println("Year " +year +" is a Leap Year.");
+	}
+	else 
+		System.out.println("Year " +year + " is not a Leap Year.");
+
+	}
+
+}
