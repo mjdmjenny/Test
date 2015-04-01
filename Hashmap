@@ -1,0 +1,31 @@
+package cjweek4day5;
+
+import java.util.HashMap;
+
+public class HashMapdemo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		HashMap map = new HashMap();
+		map.put(123, "Test");
+		map.put(4.5,null);
+		map.put(true,14.56);
+		map.put("demo",220202031);
+		
+
+		System.out.println("Hash Map:: "+map.size());
+		System.out.println("Elements :: \n "+map);
+//to find the values of Key
+		
+		System.out.println("Value mapped to 123 :: "+map.get(123));
+		System.out.println("Key in the Map "+ map.keySet());
+		System.out.println("Value in the Map "+ map.values());
+			
+		map.put(4.5, "UPdate");
+		System.out.println("Map Element :: \n"+ map);
+
+	}
+
+}
