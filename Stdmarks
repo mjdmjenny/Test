@@ -1,0 +1,66 @@
+package cjweek3day3;
+
+class Students{
+	private double English;
+	private double Maths;
+	private double Science;
+	private double History;
+	private double Geography;
+	private int Stdrnmbr;
+	private String Stdname;
+	
+	Students(double English,double Maths,double Science,double History,double Geography,int Stdrnmbr, String Stdname){
+		this.English = English;
+		this.Maths = Maths;
+		this.Science = Science;
+		this.History = History;
+		this.Geography = Geography;
+		this.Stdrnmbr = Stdrnmbr;
+		this.Stdname = Stdname;		
+	}
+	
+	public double English(){
+		return this.English;
+	}
+	
+	public double Maths(){
+		return this.Maths;
+	}
+	
+	public double Science(){
+		return this.Science;
+	}
+	public double History(){
+		return this.History;
+	}
+	public double Geography(){
+		return this.Geography;
+	}
+	public int Stdrnmbr(){
+		return this.Stdrnmbr;
+	}
+	public String Stdname(){
+		return this.Stdname;
+	}
+	
+		
+}
+public class Studentmarks {
+
+		public static void main(String[] args) {
+		Students[] stdarray = new Students[5];
+stdarray[0] = new Students(76.50d,84.60d,84.20d,95.25d,96.00d,001,"A1");
+stdarray[1] = new Students(86.50d,74.60d,74.20d,75.25d,56.00d,002,"A2");
+stdarray[2] = new Students(96.50d,94.60d,64.20d,65.25d,86.00d,003,"A3");
+stdarray[3] = new Students(56.50d,64.60d,54.20d,55.25d,76.00d,004,"A4");
+stdarray[4] = new Students(66.50d,54.60d,94.20d,85.25d,66.00d,005,"A5");
+	
+for (Students s :stdarray){
+	System.out.println("Student Name :: "+s.Stdname()+"\t Student Roll Number :: "+s.Stdrnmbr()+"\n Marks \n English:: \t"+s.English()+"\n Science:: \t"+s.Science()+
+			"\n History:: \t"+s.History()+"\n Geography:: \t"+s.Geography()+"\n Maths:: \t"+s.Maths());
+}
+			
+
+	}
+
+}
