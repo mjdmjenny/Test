@@ -1,0 +1,17 @@
+package cjweek3day2;
+
+public class Employee {
+	String EmpName;
+	int EmpID;
+	String EmpRole;
+	
+	public Employee(String EmpName,int EmpID,String EmpRole){
+		this.EmpID = EmpID;
+		this.EmpName = EmpName;
+		this.EmpRole = EmpRole;
+		
+	}
+	
+	
+
+}
