@@ -1,0 +1,36 @@
+package cjweek4Day4;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+class Student{
+	int RNo;
+	String name;
+	int age;
+	Student(int Rno,String name,int age){
+		this.RNo=Rno;
+		this.name=name;
+		this.age=age;
+	}
+}
+public class TestCollection3 {
+
+	public static void main(String[] args) {
+		Student s1=new Student(101,"Name1",23);
+		Student s2=new Student(102,"Name2",23);
+		System.out.println("Roll Number of S1:: "+s1.RNo);
+		
+		
+		ArrayList<Student> a1=new ArrayList<Student>();
+		a1.add(s1);
+		a1.add(s2);
+		
+		Iterator itr = a1.iterator();
+		while(itr.hasNext()){
+			System.out.println(itr.hasNext());
+			Student st=(Student)itr.next();
+			System.out.println(st.RNo+"  "+st.name+"  "+st.age);
+		}
+	}
+
+}
