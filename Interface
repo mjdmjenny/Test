@@ -1,0 +1,24 @@
+package cjday8;
+
+public interface Interface {
+
+	
+	public abstract void test();
+	
+	final int i=0;
+	
+
+}
+interface demo1 extends Interface{
+	
+}
+class testone implements Interface, demo1{
+	
+
+
+@Override
+public void test() {
+	System.out.println("test");
+	
+}
+}
