@@ -1,0 +1,55 @@
+Enter file contents here
+package cjDay7;
+
+abstract class sample{
+	abstract void attachment();
+	abstract void emailcc();
+	abstract void font();
+	void emailbcc(){
+		System.out.println("Testing the concrete block");
+	}
+}
+abstract class Abstractclass extends sample{
+void test1(){
+	System.out.println("Override the abstract method");
+}
+public static void main(String[] args) {
+/*Abstractclass obj = new Abstractclass();
+obj.test1();
+obj.emailcc();*/
+
+	}
+
+}
+class Execute extends Abstractclass{
+
+
+	static void testEX(){
+		
+	}
+	void testNS(){
+		
+	}
+	@Override
+	void attachment() {
+		
+		
+	}
+	@Override
+	void emailcc() {
+		
+		
+	}
+	@Override
+	void font() {
+		
+		
+	}
+	
+}
+/*class run extends Execute{
+	public static void main (){
+	Execute obj1 = new Execute();
+	
+	}
+}*/
