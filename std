@@ -1,0 +1,51 @@
+package cjweek3day3;
+
+class Stdnts{
+	private String Course;
+	private int Batch;
+	private String Dept;
+	private int Rollnbr;
+	private String Studname;
+	Stdnts(String Course, int Batch, String Dept, int Rollnbr,String Studname ){
+		this.Course = Course;
+		this.Batch = Batch;
+		this.Dept = Dept;
+		this.Rollnbr =Rollnbr;
+		this.Studname =Studname;
+		
+	}
+	public String Course(){
+		return this.Course;
+			}
+	public String Dept(){
+		return this.Dept;
+			}
+	public int Batch(){
+		return this.Batch;
+			}
+	public int Rollnbr(){
+		return this.Rollnbr;
+			}
+	public String Studname(){
+		return this.Studname;
+			}
+}
+public class Stddetails {
+
+	public static void main(String[] args) {
+Stdnts[] stdarr = new Stdnts[5];
+stdarr[0] = new Stdnts("Statistics", 2,"Maths",001,"A1" );
+stdarr[1] = new Stdnts("Algebra", 1,"Maths",002,"A2" );
+stdarr[2] = new Stdnts("Finance", 2,"Accounts",003,"A3" );
+stdarr[3] = new Stdnts("Physics", 1,"Science",004,"A4" );
+stdarr[4] = new Stdnts("Literature", 2,"English",005,"A5" );
+
+for (Stdnts s :stdarr){
+	System.out.println("Student Name :: "+s.Studname()+"\t Student Roll Number :: "+s.Rollnbr()+"\n Details \n Department:: \t"+s.Dept()+"\n Batch Nbr:: \t"+s.Batch()+
+			"\n Course:: \t"+s.Course());
+}
+
+
+	}
+
+}
