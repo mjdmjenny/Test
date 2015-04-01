@@ -1,0 +1,30 @@
+package cjweek3day2;
+
+class SampleDemo{
+	void test(){
+		
+	}
+}
+public class ArraysDemo1 {
+
+	
+	public static void main(String[] args) {
+
+SampleDemo obj = new SampleDemo();
+SampleDemo[] array = new SampleDemo[3];
+array[0] = new SampleDemo();
+array[1] = new SampleDemo();
+array[2] = new SampleDemo();
+
+for (SampleDemo s1 :array){
+	System.out.println(s1);
+}
+
+
+for (int i=0; i< array.length; i++ ){
+	System.out.println(array[i]);
+	
+}
+	}
+
+}
