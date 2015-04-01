@@ -1,0 +1,32 @@
+package cjweek4day5;
+
+import java.util.PriorityQueue;
+
+public class Priorityque {
+
+	
+	public static void main(String[] args) {
+		PriorityQueue que1 = new PriorityQueue();
+		que1.add(45);
+		que1.add(5);
+		que1.add(465);
+		que1.add(42);
+		que1.add(40);
+		que1.add(41);
+
+		
+		System.out.println("Total Elements in the queue:: "+que1.size());
+		for(Object obj: que1){
+			System.out.println(obj);
+		}
+		/*
+		System.out.println("Remove the head of the queue" + que1.poll());	
+		System.out.println("Total Elements in the Queue :: "+que1.size());
+		System.out.println("View the Head of hte Queue " + que1.peek());
+		System.out.println("Total Elements in the Queue :: "+que1.size());
+			
+		*/	
+		
+	}
+
+}
