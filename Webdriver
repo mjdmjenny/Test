@@ -1,0 +1,49 @@
+package cjweek5dat3;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebDriver;
+
+public class Getwebdriver {
+
+	
+	public static void main(String[] args) {
+		WebDriver driver = new FirefoxDriver();
+		
+		//driver.get("https://google.com");
+		//driver.close();
+		driver.navigate().to("C:\\Users\\169143\\Desktop\\sample1.html");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		
+		
+		//By i = new By(driver.navigate().to("C:\\Users\\169143\\Desktop\\sample1.html"));
+		//driver.findElement(By.id("i")).click();
+//driver.findElement(By.linkText("Mars Training")).click();
+//driver.findElement(By.partialLinkText("Mars Training")).click();
+
+//driver.findElement(By.xpath("//a[contains(@id,'i')]")).getText();
+By b= By.id("i");
+System.out.println(driver.findElement(b).getText());
+System.out.println(driver.getTitle());
+
+driver.findElement(By.xpath("//input")).clear();
+WebElement dropDowndriver =driver.findElement(By.xpath("//select"));
+
+
+Select select = new Select(dropDowndriver);
+
+select.selectByVisibleText("vada");
+ WebElement d =driver.findElement(By.id("test"));
+ if(!d.isSelected()){
+	 d.click();
+	  }else{
+		  System.out.println("Checkbox is already selected");
+	  }
+
+	}
+
+}
