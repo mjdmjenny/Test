@@ -1,0 +1,34 @@
+package cjweek5dat3;
+
+import java.util.Iterator;
+import java.util.Set;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class YahooDemo {
+
+public static void main(String[] args) throws InterruptedException {
+WebDriver driver = new FirefoxDriver();
+driver.get("https://www.irctc.co.in/");
+//driver.findElement(By.xpath(".//*[@id='uh-more-link']/a"));
+driver.findElement(By.xpath(".//a[contains(text(),'Contact Us')]")).click();
+Thread.sleep(2000);
+Set<String> a =driver.getWindowHandles();
+System.out.println("NO of windows :: " + a.size());
+Iterator <String> b = a.iterator();
+while(b.hasNext()){
+String c = b.next();
+System.out.println(c);
+driver.switchTo().window(c);
+System.out.println(driver.getTitle());
+Thread.sleep(2000);
+driver.close();
+}
+//driver.findElement(By.xpath(".//*[@id='uh-more-link']/ul/li[4]/a")).click();
+
+}
+
+}
